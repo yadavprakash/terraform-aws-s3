@@ -390,22 +390,6 @@ module "s3_bucket" {
 }
 ```
 
-## Module Inputs
-- `name`: The name you want to assign to this access point.
-- `environment`: The environment for your application.
-- `acceleration_status`: Sets the accelerate configuration of an existing bucket. Can be Enabled or Suspended
-- `kms_master_key_id`:The AWS KMS master key ID used for the SSE-KMS encryption.
-- `cors_rule`:  A rule of Cross-Origin Resource Sharing (documented below).
-- `acl`: The canned ACL to apply. Defaults to "private". Conflicts with grant.
-- `logging`: A settings of bucket logging.
-- For security group settings, you can configure the ingress and egress rules using variables like:
-
-## Module Outputs
-- `id` : Unique identifier for the rule.
-- `tags` : A map of tags to assign to the bucket.
-- `arn` : The ARN of the bucket. Will be of format
-- `bucket_domain_name`: The bucket domain name. Will be of format
-- Other relevant security group outputs (modify as needed).
 
 ## Examples
 For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-s3/tree/master/_examples) directory within this repository.
@@ -415,6 +399,7 @@ Your Name Replace '[License Name]' and '[Your Name]' with the appropriate licens
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-aws-s3/blob/master/LICENSE) file for details.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
