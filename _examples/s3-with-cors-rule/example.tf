@@ -24,3 +24,4 @@ module "s3_bucket" {
     max_age_seconds = 3000
   }]
 }
+

@@ -19,7 +19,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-secure-bucket"
   environment = local.environment
   label_order = local.label_order
@@ -32,7 +32,7 @@ module "s3_bucket" {
 ## Example: s3 complete
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
   name        = "arcx-13"
   environment = local.environment
   label_order = local.label_order
@@ -221,7 +221,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-secure-bucket"
   environment = local.environment
   label_order = local.label_order
@@ -243,7 +243,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-encryption-bucket"
   s3_name     = "dmzx"
   environment = local.environment
@@ -260,7 +260,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-source        = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+source        = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
 name          = "test-logging-bucket"
 s3_name       = "wewrrt"
 environment   = local.environment
@@ -277,7 +277,7 @@ depends_on    = [module.logging_bucket]
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-logging-encryption-bucket"
   s3_name     = "aqua"
   environment = local.environment
@@ -299,7 +299,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/opsstation/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-s3"
   s3_name     = "poxord"
   environment = local.environment
@@ -392,13 +392,13 @@ module "s3_bucket" {
 
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-s3/tree/master/_examples) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-aws-s3/tree/master/_examples) directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-aws-s3/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-aws-s3/blob/master/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -418,7 +418,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -479,7 +479,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`Environment`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
 | <a name="input_lifecycle_configuration_rules"></a> [lifecycle\_configuration\_rules](#input\_lifecycle\_configuration\_rules) | A list of lifecycle rules | <pre>list(object({<br>    id      = string<br>    prefix  = string<br>    enabled = bool<br>    tags    = map(string)<br><br>    enable_glacier_transition            = bool<br>    enable_deeparchive_transition        = bool<br>    enable_standard_ia_transition        = bool<br>    enable_current_object_expiration     = bool<br>    enable_noncurrent_version_expiration = bool<br><br>    abort_incomplete_multipart_upload_days         = number<br>    noncurrent_version_glacier_transition_days     = number<br>    noncurrent_version_deeparchive_transition_days = number<br>    noncurrent_version_expiration_days             = number<br><br>    standard_transition_days    = number<br>    glacier_transition_days     = number<br>    deeparchive_transition_days = number<br>    expiration_days             = number<br>  }))</pre> | `null` | no |
 | <a name="input_logging"></a> [logging](#input\_logging) | Logging Object to enable and disable logging | `bool` | `false` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation'. | `string` | `"opsstation"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash'. | `string` | `"yadavprakash"` | no |
 | <a name="input_metric_configuration"></a> [metric\_configuration](#input\_metric\_configuration) | Map containing bucket metric configuration. | `any` | `[]` | no |
 | <a name="input_mfa"></a> [mfa](#input\_mfa) | Optional, Required if versioning\_configuration mfa\_delete is enabled) Concatenation of the authentication device's serial number, a space, and the value that is displayed on your authentication device. | `string` | `null` | no |
 | <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | Specifies whether MFA delete is enabled in the bucket versioning configuration. Valid values: Enabled or Disabled. | `string` | `"Disabled"` | no |
@@ -491,7 +491,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_owner"></a> [owner](#input\_owner) | Bucket owner's display name and ID. Conflicts with `acl` | `map(string)` | `{}` | no |
 | <a name="input_owner_id"></a> [owner\_id](#input\_owner\_id) | The canonical user ID associated with the AWS account. | `string` | `""` | no |
 | <a name="input_replication_configuration"></a> [replication\_configuration](#input\_replication\_configuration) | Map containing cross-region replication configuration. | `any` | `{}` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/opsstation/terraform-aws-s3?ref=v1.0.0"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/yadavprakash/terraform-aws-s3?ref=v1.0.0"` | no |
 | <a name="input_request_payer"></a> [request\_payer](#input\_request\_payer) | (Optional) Specifies who should bear the cost of Amazon S3 data transfer. Can be either BucketOwner or Requester. By default, the owner of the S3 bucket would incur the costs of any data transfer. See Requester Pays Buckets developer guide for more information. | `string` | `null` | no |
 | <a name="input_restrict_public_buckets"></a> [restrict\_public\_buckets](#input\_restrict\_public\_buckets) | Whether Amazon S3 should restrict public bucket policies for this bucket. | `bool` | `true` | no |
 | <a name="input_s3_name"></a> [s3\_name](#input\_s3\_name) | name of s3 bucket | `string` | `null` | no |

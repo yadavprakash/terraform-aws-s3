@@ -8,7 +8,7 @@ locals {
 }
 
 module "kms_key" {
-  source      = "git::git@github.com:opsstation/terraform-aws-kms?ref=v1.0.0"
+  source      = "git::git@github.com:yadavprakash/terraform-aws-kms?ref=v1.0.0"
   name        = "kms11"
   environment = local.environment
   label_order = local.label_order
@@ -49,3 +49,4 @@ module "s3_bucket" {
   enable_kms                    = true
   kms_master_key_id             = module.kms_key.key_arn
 }
+

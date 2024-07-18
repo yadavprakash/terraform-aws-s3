@@ -6,7 +6,7 @@ variable "name" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/opsstation/terraform-aws-s3?ref=v1.0.0"
+  default     = "https://github.com/yadavprakash/terraform-aws-s3?ref=v1.0.0"
   description = "Terraform current module repo"
 }
 
@@ -24,8 +24,8 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = "opsstation"
-  description = "ManagedBy, eg 'opsstation'."
+  default     = "yadavprakash"
+  description = "ManagedBy, eg 'yadavprakash'."
 }
 
 variable "enabled" {

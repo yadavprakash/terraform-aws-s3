@@ -190,3 +190,4 @@ resource "aws_iam_policy_attachment" "replication" {
   roles      = [aws_iam_role.replication.name]
   policy_arn = aws_iam_policy.replication.arn
 }
+

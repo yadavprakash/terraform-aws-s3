@@ -18,7 +18,7 @@ module "logging_bucket" {
 }
 
 module "kms_key" {
-  source      = "git::git@github.com:opsstation/terraform-aws-kms?ref=v1.0.0"
+  source      = "git::git@github.com:yadavprakash/terraform-aws-kms?ref=v1.0.0"
   name        = "kms12"
   environment = local.environment
   label_order = local.label_order
@@ -63,3 +63,4 @@ module "s3_bucket" {
   target_prefix                 = "logs"
   depends_on                    = [module.logging_bucket]
 }
+
