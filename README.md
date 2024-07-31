@@ -19,7 +19,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-s3.git
   name        = "test-secure-bucket"
   environment = local.environment
   label_order = local.label_order
